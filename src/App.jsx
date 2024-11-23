@@ -1,9 +1,10 @@
 import './App.css';
-import BlueButton from './react_kiso/02kai/blueButton';
-import Tumbnail from   './react_kiso/02kai/Tumbnail';
-import ButtonByClass from './react_kiso/04kai/ButtonByClass';
-import ButtonByFunc from './react_kiso/04kai/ButtonByFunc';
-import Article from './react_kiso/04kai/Article';
+import BlueButton from       './react_kiso/02kai/blueButton';
+import Tumbnail from         './react_kiso/02kai/Tumbnail';
+import ButtonByClass from    './react_kiso/04kai/ButtonByClass';
+import ButtonByFunc from     './react_kiso/04kai/ButtonByFunc';
+import Article from          './react_kiso/04kai/Article';
+import Article05 from        './react_kiso/05kai/Article05';
 
 function App() {
   const authorName = 'torahack';
@@ -11,11 +12,8 @@ function App() {
 
   return (
     <>
-      {/* 第2回 */}
-      <div className='App'>
-        <BlueButton />
-        <Tumbnail />
-      </div> 
+      <div className='App'><h1>第5回</h1></div>
+      <Article05 title="Title by export default." />
 
       {/* 第4回 */}
       <div>
@@ -29,7 +27,7 @@ function App() {
           author={authorName}
           updatedAt={now}
         />
-        <Article 
+        <Article  
           title="新・日本一わかりやすいReact入門【基礎編】"
           order={5}
           content={"今日のトピックはuseStateについて。"} 
@@ -46,6 +44,13 @@ function App() {
           updatedAt={now}
         />
       </div>
+
+      {/* 第2回 */}
+      <div className='App'>
+        <BlueButton />
+        <Tumbnail />
+      </div> 
+
     </>
   );
 }
