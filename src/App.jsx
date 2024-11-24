@@ -6,6 +6,7 @@ import ButtonByFunc from     './react_kiso/04kai/ButtonByFunc';
 import Article from          './react_kiso/04kai/Article';
 import Article05 from        './react_kiso/05kai/Article05';
 import Article06 from        './react_kiso/06kai/Article06';
+import Article07 from        './react_kiso/07kai/Article07';
 
 function App() {
   const authorName = 'torahack';
@@ -13,13 +14,16 @@ function App() {
 
   return (
     <>
+      <div className='App'><h1>第7回</h1></div>
+      <Article07/>
+    
       <div className='App'><h1>第6回</h1></div>
       <Article06/>
 
       <div className='App'><h1>第5回</h1></div>
       <Article05 title="Title by export default." />
 
-      {/* 第4回 */}
+      <div className='App'><h1>第4回</h1></div>
       <div>
         <ButtonByClass hello="Hello by class." />
         <ButtonByFunc hello="Hello by func." />
@@ -49,7 +53,7 @@ function App() {
         />
       </div>
 
-      {/* 第2回 */}
+      <div className='App'><h1>第2回</h1></div>
       <div className='App'>
         <BlueButton />
         <Tumbnail />
