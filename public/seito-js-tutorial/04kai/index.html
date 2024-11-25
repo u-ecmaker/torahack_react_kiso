@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- rel属性とはrelationの略で、リンク先のファイルとの関係を示す -->
+    <link rel="stylesheet" href="style.css">
+    <title>クラスとインスタンス</title>
+  </head>
+
+  <body>
+    <!-- id属性:プレフィックス ↓ をつけると他のjsファイルと区別がつきやすく親切 -->
+    <div class="accordion" id="js-faq">
+      <p href="" class="accordion-trigger">
+        Q1.人生に疲れました
+      </p>
+      <div class="accordion-contents">
+        A1.それなら働くのをやめてください
+      </div>
+      <p href="" class="accordion-trigger">
+        Q2.バナナはおやつに入りますか？
+      </p>
+      <div class="accordion-contents">
+        A2.グレーです<br>
+        バナナは果物であり、通常は食事の一部として考えられますが、状況によってはおやつとしても扱われることがあります。例えば、遠足やピクニックなどの特別なイベントでは、おやつとして持参することが一般的です。したがって、バナナがおやつに入るかどうかは、文脈や個人の判断に依存します。
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="accordion" id="js-accordion">
+      <a href="" class="accordion-trigger">
+        Q1.今日の天気はどうですか？
+      </a>
+      <div class="accordion-contents">
+        A1.今日は晴れです。外に出かけるのに良い日です。
+      </div>
+      <a href="" class="accordion-trigger">
+        Q2.好きな食べ物は何ですか？
+      </a>
+      <div class="accordion-contents">
+        A2.私は寿司が大好きです。新鮮な魚とご飯の組み合わせが最高です。
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <dl class="accordion" id="js-mini">
+      <dt href="" class="accordion-trigger">
+        Q1.今日の天気はどうですか？
+      </dt>
+      <dd class="accordion-contents">
+        A1.今日は晴れです。外に出かけるのに良い日です。
+      </dd>
+    </dl>
+
+    <script src="accordion.js"></script>
+  </body>
+
+</html>
