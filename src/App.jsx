@@ -8,6 +8,7 @@ import Article05 from        './react_kiso/05kai/Article05';
 import Article06 from        './react_kiso/06kai/Article06';
 import Article07 from        './react_kiso/07kai/Article07';
 import Article08 from        './react_kiso/08kai/Article08';
+import Article09 from        './react_kiso/09kai/Article09';
 
 function App() {
   const authorName = 'torahack';
@@ -15,6 +16,9 @@ function App() {
 
   return (
     <>
+      <div className='App'><h1>第9回</h1></div>
+      <Article09/>
+
       <div className='App'><h1>第8回</h1></div>
       <Article08/>
 
