@@ -1,35 +1,33 @@
+// DOM要素の取得
 const button = document.getElementById('addBtn');
 const lists = document.getElementById('lists');
 
-button.addEventListener('click', async function() {
-  // データのやり取り
+// 関数 (メソッド)
+// DOM操作
+function addList(user) {
+  const list = document.createElement('li');
+  list.textContent = user.name;
+  lists.appendChild(list);
+}
+
+// データのやり取り、非同期関数
+async function getUsers() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
   const users = await res.json();
+  return users;
+}
 
-  // DOM操作
-  users.forEach(function(user) {
-    const list = document.createElement('li');
-    list.textContent = user.name;
-    lists.appendChild(list);
-  });
+// データのやり取り、非同期関数
+async function listUsers() {
+  const users = await getUsers();
+  users.forEach(addList);
   // for ver.
   // for (let index = 0; index < users.length; index++) {
   //   const user = users[index];
-  //   const list = document.createElement('li');
-  //   list.textContent = user.name;
-  //   lists.appendChild(list);
+  //   addList(user);
   // }
-});
+}
 
-window.addEventListener('load', async function() {
-  // データのやり取り
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
-  const users = await res.json();
-
-  // DOM操作
-  users.forEach(function(user) {
-    const list = document.createElement('li');
-    list.textContent = user.name;
-    lists.appendChild(list);
-  });
-});
+// イベント
+window.addEventListener('load', listUsers);
+button.addEventListener('click', listUsers);
